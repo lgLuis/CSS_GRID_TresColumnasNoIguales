@@ -1,0 +1,95 @@
+/*VARIABLES GLOBALES*/
+/*https://colorhunt.co/palette/281939*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+:root{
+    --primario:#ffffc7;
+    --secundario:#233e8b;
+    --verdeAgua:#a9f1df;
+    --verde:#1eae98;
+    --fuentePpal:'Baloo Tammudu 2', cursive;
+}
+
+body{
+    font-family: var(--fuentePpal);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+img{
+    max-width: 100%;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+p{
+    font-size: 2rem;
+}
+
+/*
+.entrada-blog{
+    display: inline-block;
+    background-color: var(--primario);
+}
+*/
+/*OK!*/
+
+/*
+@media(min-width:768px){
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+    .contenido-ppal{
+        grid-column: 2/3;
+    }
+    .sidebar-1{
+        grid-column: 1/2;
+    }
+}
+*/
+@media(min-width:768px){
+    .contenedor-grid{
+        display: grid;
+        grid-template-areas: "izq centro der";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+    .contenido-ppal{
+        grid-area: centro;
+    }
+    .sidebar-1{
+        grid-area: izq;
+    }
+}
+
+.sidebar-1,
+.sidebar-2,
+.contenido-ppal p {
+    text-align: justify;
+}
